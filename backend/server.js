@@ -20,8 +20,7 @@ connection.once("open", () => {
   console.log("MongoDB connection success!");
 });
 
-const blogRouter = require("../backend/routes/blogRoute");
-
+const blogRouter = require("./routes/blogRouter");
 app.use("/blog", blogRouter);
 
 app.listen(PORT, () => {
