@@ -1,10 +1,15 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import CreateBlog from "./components/CreateBlog";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route exact path="/add" element={<CreateBlog />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
