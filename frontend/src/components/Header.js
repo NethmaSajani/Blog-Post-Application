@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -7,26 +8,17 @@ function Header() {
         <a className="navbar-brand" href="#">
           Navbar
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
 
         <form className="d-flex">
-          <button
-            id="create-btn"
-            className="btn btn-outline-success"
-            type="button"
-          >
-            Create New Blog
-          </button>
+          <Link to="/add">
+            <button
+              id="create-btn"
+              className="btn btn-outline-success"
+              type="button"
+            >
+              Create New Blog
+            </button>
+          </Link>
         </form>
       </div>
     </nav>
