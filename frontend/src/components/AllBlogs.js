@@ -8,23 +8,28 @@ const Blog = (props) => (
     <Row>
       <Col>
         <h5>{props.blog.Title}</h5>
-        <p>{props.blog.Content}</p>
-        <p>{props.blog.createdAt}</p><br></br>
+        <p id="content">{props.blog.Content}</p>
+        <p>{props.blog.createdAt}</p>
+        <br></br>
       </Col>
       <Col id="column">
         <div>
           <button
-            style={{marginBottom: "10px" }}
-              className="btn btn-link"
-              onClick={() => {
-                props.deleteBlog(props.blog._id);
-              }}
+            style={{ marginBottom: "10px" }}
+            className="btn btn-link"
+            onClick={() => {
+              props.deleteBlog(props.blog._id);
+            }}
           >
             Delete Blog
           </button>
         </div>
         <div>
-          <button>Edit Blog</button>
+          <button>
+            <Link className="btn btn-link" to={`/update/${props.blog._id}`}>
+              Edit Blog
+            </Link>
+          </button>
         </div>
       </Col>
     </Row>
@@ -56,14 +61,14 @@ export default function AllBlogs() {
   }, [blogs.length]);
 
   //This method will delete a blog
-    async function deleteBlog(id) {
-      await fetch(`http://localhost:5000/${id}`, {
-        method: "DELETE",
-      });
+  async function deleteBlog(id) {
+    await fetch(`http://localhost:8070/blog/delete/${id}`, {
+      method: "DELETE",
+    });
 
-      const newBlogs = blogs.filter((el) => el._id !== id);
-      setBlogs(newBlogs);
-    }
+    const newBlogs = blogs.filter((el) => el._id !== id);
+    setBlogs(newBlogs);
+  }
 
   // This method will map out all blogs
   function blogList() {
