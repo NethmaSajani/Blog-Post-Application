@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 //Create new blog
 function CreateBlog() {
+
+
+  
   return (
     <div className="container">
       <form>
@@ -62,7 +65,7 @@ function CreateBlog() {
         </div>
         <div>
           <button type="submit" className="btn btn-primary">
-            Sign in
+            Submit
           </button>
         </div>
       </form>
