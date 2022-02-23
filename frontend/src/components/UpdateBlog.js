@@ -39,7 +39,7 @@ export default function UpdateBlog() {
     return;
   }, [params.id, navigate]);
 
-  // These methods will update the state properties.
+  // These methods will update
   function updateForm(value) {
     return setForm((prev) => {
       return { ...prev, ...value };
@@ -54,7 +54,7 @@ export default function UpdateBlog() {
       Author: form.Author,
     };
 
-    // This will send a post request to update the data in the database.
+    // This will send a post request to update
     await fetch(`http://localhost:5000/update/${params.id}`, {
       method: "POST",
       body: JSON.stringify(editedBlog),
@@ -66,7 +66,7 @@ export default function UpdateBlog() {
     navigate("/");
   }
 
-  // This following section will display the form that takes input from the user to update the data.
+  // This will display the form to update
   return (
     <div>
       <h3>Update Blog</h3>
