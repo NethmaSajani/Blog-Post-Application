@@ -1,0 +1,67 @@
+.update_btn {
+    background-color: #ffffff; 
+    border: 2px solid blue;
+    border-radius: 14px;
+    color: blue;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+  }
+
+  .dlt_btn {
+    background-color: #ffffff; 
+    border: 2px solid crimson;
+    border-radius: 14px;
+    color: crimson;
+    width: 150px;
+    padding: 9px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .dlt_btn:hover{
+      background-color: crimson;
+      color: white;
+  }
+
+  .update_btn:hover{
+    background-color: rgb(12, 1, 167);
+    color: white;
+}
+
+  #container1 {
+      width: 1500px;  
+      margin-left: 120px;
+      width: 1300px;
+      overflow-x: hidden;
+  }
+
+  #content{
+      color: #1d1d1d;
+  }
+
+  #header{
+      color: rgb(43, 43, 43);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+  }
+
+  #btn_content{
+      margin-left: 950px;
+      
+  }
+
+  #date{
+      color: #636363;
+  }
+
+  #title{
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #636363;
+  }
